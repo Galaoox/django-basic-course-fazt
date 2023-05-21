@@ -8,16 +8,16 @@ stop:
 	docker-compose down
 
 migrate:
-	docker-compose run web python manage.py migrate
+	docker-compose exec web python manage.py migrate
 
 makemigrations:
-	docker-compose run web python manage.py makemigrations
+	docker-compose exec web python manage.py makemigrations
 
 install_deps:
 	docker-compose run web pip install -r requirements.txt
 
 run_command:
-	docker-compose run web $(cmd)
+	docker-compose exec web $(cmd)
 
 reset_db:
 	docker-compose down
