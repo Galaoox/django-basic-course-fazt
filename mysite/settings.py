@@ -31,7 +31,6 @@ def get_env_variable(var_name):
         raise ImproperlyConfigured(error_msg)
 
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -65,7 +64,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-
+    'apps.myapp',
 ]
 
 
