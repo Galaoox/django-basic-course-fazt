@@ -4,6 +4,9 @@ build:
 start:
 	docker-compose up
 
+start_d:
+	docker-compose up -d
+
 stop:
 	docker-compose down
 
@@ -16,8 +19,8 @@ makemigrations:
 install_deps:
 	docker-compose run web pip install -r requirements.txt
 
-run_command:
-	docker-compose exec web $(cmd)
+shell:
+	docker-compose exec web python manage.py shell
 
 reset_db:
 	docker-compose down
