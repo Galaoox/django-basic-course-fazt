@@ -7,6 +7,6 @@ urlpatterns = [
     # de esta forma se pasan parametros a la url, se debe definir el tipo del parametro
     path('hello/<str:username>', hello),
     path('projects/', projects),
-    path('tasks/<int:id>', tasks),
+    path('tasks/', tasks),
 
 ]
